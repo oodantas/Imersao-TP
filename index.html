@@ -3,118 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imersão TP</title>
+  <title>Imersão TP · 13C SLM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav__logo">Imersão TP</div>
-      <ul class="nav__links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav-bar">
+    <span class="nav-bar__logo mono">[ IMERSÃO TP ]</span>
+    <nav class="nav-bar__links">
+      <a href="#sobre">01// SOBRE</a>
+      <a href="#metodo">02// MÉTODO</a>
+      <a href="#projetos">03// PROJETOS</a>
+      <a href="#contato">04// CONTATO</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero__content">
-        <h1 class="hero__title">Imersão <span class="highlight">TP</span></h1>
-        <p class="hero__subtitle">Aprendizado prático e imersivo em tecnologia</p>
-        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="mono tag">[ LOG: INÍCIO DE SESSÃO · 02.05.2026 ]</p>
+      <h1 class="hero__title">
+        IMERSÃO<br />
+        <em>TP</em>
+      </h1>
+      <div class="hero__rule"></div>
+      <p class="hero__sub">
+        Formação intensiva em tecnologia e produto.<br />
+        Do conceito à entrega — com rigor editorial.
+      </p>
+      <a href="#sobre" class="btn">VER PROGRAMA</a>
+    </div>
+    <div class="hero__number serif" aria-hidden="true">01//</div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section section--dark" id="sobre">
+    <div class="section__inner">
+      <p class="section__label mono">01// SOBRE</p>
+      <h2 class="section__title">O QUE<br /><em>É ISTO</em></h2>
+      <div class="section__rule gold"></div>
+      <div class="content-cols">
+        <p class="body-text">
+          Imersão TP é um programa de aprendizado prático estruturado para quem leva tecnologia a sério. Não há atalhos, não há superficialidade — apenas método, profundidade e entrega.
+        </p>
+        <p class="body-text muted">
+          Cada módulo é projetado como um trabalho editorial: pensado, revisado e executado com precisão. O excesso é o inimigo.
+        </p>
       </div>
-      <div class="hero__visual">
-        <div class="code-block">
-          <span class="code-line"><span class="kw">const</span> aprender = () =&gt; {</span>
-          <span class="code-line">  <span class="kw">const</span> foco = <span class="str">"tecnologia"</span>;</span>
-          <span class="code-line">  <span class="kw">return</span> foco + <span class="str">" + prática"</span>;</span>
-          <span class="code-line">};</span>
+      <p class="mono log-footer">[ LOG: PRÓXIMO CONCEITO → MÉTODO ]</p>
+    </div>
+  </section>
+
+  <!-- ===== MÉTODO ===== -->
+  <section class="section section--cream" id="metodo">
+    <div class="section__inner">
+      <p class="section__label mono">02// MÉTODO</p>
+      <h2 class="section__title">COMO<br /><em>Funciona</em></h2>
+      <div class="section__rule"></div>
+      <div class="pilares">
+        <div class="pilar">
+          <span class="pilar__num serif">01//</span>
+          <h3 class="pilar__title">Fundamentos</h3>
+          <p class="pilar__text">Base sólida antes de qualquer framework. Lógica, estrutura e pensamento computacional.</p>
+        </div>
+        <div class="pilar">
+          <span class="pilar__num serif">02//</span>
+          <h3 class="pilar__title">Prática Deliberada</h3>
+          <p class="pilar__text">Projetos reais, feedbacks diretos e iteração contínua. Sem exercícios artificiais.</p>
+        </div>
+        <div class="pilar">
+          <span class="pilar__num serif">03//</span>
+          <h3 class="pilar__title">Entrega</h3>
+          <p class="pilar__text">Portfólio técnico com código auditável, documentação e raciocínio exposto.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="sobre">
-      <div class="container">
-        <h2 class="section__title">Sobre o Projeto</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="card__icon">🎯</div>
-            <h3 class="card__title">Objetivo</h3>
-            <p class="card__text">Aprendizado prático com projetos reais e desafios do mercado de tecnologia.</p>
+  <!-- ===== PROJETOS ===== -->
+  <section class="section section--ivy" id="projetos">
+    <div class="section__inner">
+      <p class="section__label mono">03// PROJETOS</p>
+      <h2 class="section__title">TRABALHOS<br /><em>Entregues</em></h2>
+      <div class="section__rule gold"></div>
+      <div class="projetos-grid">
+
+        <article class="projeto">
+          <div class="projeto__header">
+            <span class="mono tag-sm">WEB · HTML / CSS / JS</span>
+            <span class="projeto__status mono">CONCLUÍDO</span>
           </div>
-          <div class="card">
-            <div class="card__icon">🚀</div>
-            <h3 class="card__title">Metodologia</h3>
-            <p class="card__text">Imersão intensiva com foco em resolução de problemas e desenvolvimento de habilidades.</p>
+          <h3 class="projeto__title">Landing Page Responsiva</h3>
+          <p class="projeto__desc">Interface editorial construída do zero — tipografia de display, grid de 12 colunas e animações por Intersection Observer.</p>
+          <div class="projeto__footer">
+            <span class="mono small muted">FONTE: ----</span>
+            <a href="#" class="projeto__link mono">VER →</a>
           </div>
-          <div class="card">
-            <div class="card__icon">💡</div>
-            <h3 class="card__title">Resultado</h3>
-            <p class="card__text">Projetos prontos para portfólio com código limpo e boas práticas de desenvolvimento.</p>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto__header">
+            <span class="mono tag-sm">API · FETCH / DOM</span>
+            <span class="projeto__status mono">EM ANDAMENTO</span>
           </div>
+          <h3 class="projeto__title">Consumo de API Pública</h3>
+          <p class="projeto__desc">Integração com endpoint externo, tratamento de erros e renderização dinâmica. Sem dependências de terceiros.</p>
+          <div class="projeto__footer">
+            <span class="mono small muted">FONTE: ----</span>
+            <a href="#" class="projeto__link mono">VER →</a>
+          </div>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto__header">
+            <span class="mono tag-sm">FULL STACK · NODE / DB</span>
+            <span class="projeto__status mono">PLANEJADO</span>
+          </div>
+          <h3 class="projeto__title">Aplicação Full Stack</h3>
+          <p class="projeto__desc">Backend próprio, autenticação, persistência em banco de dados e deploy em produção. Código auditável.</p>
+          <div class="projeto__footer">
+            <span class="mono small muted">FONTE: ----</span>
+            <a href="#" class="projeto__link mono">VER →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section section--cream" id="contato">
+    <div class="section__inner section__inner--narrow">
+      <p class="section__label mono">04// CONTATO</p>
+      <h2 class="section__title">ENTRE EM<br /><em>Contato</em></h2>
+      <div class="section__rule"></div>
+      <form class="form" id="contact-form" novalidate>
+        <div class="form__row">
+          <label class="form__label mono" for="name">[ NOME ]</label>
+          <input class="form__input" type="text" id="name" name="name" placeholder="Seu nome completo" required />
         </div>
-      </div>
-    </section>
-
-    <section class="section section--dark" id="projetos">
-      <div class="container">
-        <h2 class="section__title">Projetos</h2>
-        <div class="projects" id="projects-grid">
-          <article class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__tag">Web</span>
-            </div>
-            <h3 class="project-card__title">Projeto 01</h3>
-            <p class="project-card__desc">Landing page responsiva com HTML, CSS e JavaScript.</p>
-            <a href="#" class="project-card__link">Ver código →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__tag">API</span>
-            </div>
-            <h3 class="project-card__title">Projeto 02</h3>
-            <p class="project-card__desc">Consumo de API pública com fetch e manipulação do DOM.</p>
-            <a href="#" class="project-card__link">Ver código →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__tag">Full Stack</span>
-            </div>
-            <h3 class="project-card__title">Projeto 03</h3>
-            <p class="project-card__desc">Aplicação completa com front-end, back-end e banco de dados.</p>
-            <a href="#" class="project-card__link">Ver código →</a>
-          </article>
+        <div class="form__row">
+          <label class="form__label mono" for="email">[ E-MAIL ]</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="seu@email.com" required />
         </div>
-      </div>
-    </section>
+        <div class="form__row">
+          <label class="form__label mono" for="message">[ MENSAGEM ]</label>
+          <textarea class="form__input form__textarea" id="message" name="message" placeholder="Escreva aqui..." required></textarea>
+        </div>
+        <button class="btn btn--dark" type="submit">ENVIAR MENSAGEM</button>
+      </form>
+    </div>
+  </section>
 
-    <section class="section" id="contato">
-      <div class="container container--narrow">
-        <h2 class="section__title">Contato</h2>
-        <form class="form" id="contact-form">
-          <div class="form__group">
-            <label class="form__label" for="name">Nome</label>
-            <input class="form__input" type="text" id="name" name="name" placeholder="Seu nome" required />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="email">E-mail</label>
-            <input class="form__input" type="email" id="email" name="email" placeholder="seu@email.com" required />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="message">Mensagem</label>
-            <textarea class="form__input form__textarea" id="message" name="message" placeholder="Sua mensagem..." required></textarea>
-          </div>
-          <button class="btn btn--primary btn--full" type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Imersão TP. Feito com 💙</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span class="mono small">IMERSÃO TP · 13C SLM · 02.05.2026</span>
+      <span class="site-footer__rule" aria-hidden="true">————————————</span>
+      <span class="mono small">PG 01</span>
     </div>
   </footer>
 

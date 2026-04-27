@@ -1,4 +1,4 @@
-// Smooth scroll for anchor links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -9,46 +9,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact form handler
-const form = document.getElementById('contact-form');
-form?.addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const original = btn.textContent;
-
-  btn.textContent = 'Enviado! ✓';
-  btn.style.background = 'var(--color-green)';
-  btn.disabled = true;
-
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.style.background = '';
-    btn.disabled = false;
-    form.reset();
-  }, 3000);
-});
-
-// Intersection Observer — fade-in on scroll
+// Fade-in on scroll
 const observer = new IntersectionObserver(
   entries => entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.dataset.visible = 'true';
       observer.unobserve(entry.target);
     }
   }),
-  { threshold: 0.12 }
+  { threshold: 0.08 }
 );
 
-document.querySelectorAll('.card, .project-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+document.querySelectorAll('.pilar, .projeto, .hero__inner').forEach(el => {
+  el.style.cssText = 'opacity:0;transform:translateY(24px);transition:opacity 0.5s ease,transform 0.5s ease';
   observer.observe(el);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Add .visible class styles via JS to avoid needing extra CSS
   const style = document.createElement('style');
-  style.textContent = '.visible { opacity: 1 !important; transform: none !important; }';
+  style.textContent = '[data-visible="true"]{opacity:1!important;transform:none!important}';
   document.head.appendChild(style);
+});
+
+// Contact form
+const form = document.getElementById('contact-form');
+form?.addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = form.querySelector('button');
+  btn.textContent = '[ ENVIADO ✓ ]';
+  btn.style.opacity = '0.6';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'ENVIAR MENSAGEM';
+    btn.style.opacity = '';
+    btn.disabled = false;
+    form.reset();
+  }, 3000);
 });
