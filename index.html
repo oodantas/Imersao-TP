@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imersão TP</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">Imersão TP</div>
+      <ul class="nav__links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Imersão <span class="highlight">TP</span></h1>
+        <p class="hero__subtitle">Aprendizado prático e imersivo em tecnologia</p>
+        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+      </div>
+      <div class="hero__visual">
+        <div class="code-block">
+          <span class="code-line"><span class="kw">const</span> aprender = () =&gt; {</span>
+          <span class="code-line">  <span class="kw">const</span> foco = <span class="str">"tecnologia"</span>;</span>
+          <span class="code-line">  <span class="kw">return</span> foco + <span class="str">" + prática"</span>;</span>
+          <span class="code-line">};</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title">Sobre o Projeto</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card__icon">🎯</div>
+            <h3 class="card__title">Objetivo</h3>
+            <p class="card__text">Aprendizado prático com projetos reais e desafios do mercado de tecnologia.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">🚀</div>
+            <h3 class="card__title">Metodologia</h3>
+            <p class="card__text">Imersão intensiva com foco em resolução de problemas e desenvolvimento de habilidades.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">💡</div>
+            <h3 class="card__title">Resultado</h3>
+            <p class="card__text">Projetos prontos para portfólio com código limpo e boas práticas de desenvolvimento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="projetos">
+      <div class="container">
+        <h2 class="section__title">Projetos</h2>
+        <div class="projects" id="projects-grid">
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Web</span>
+            </div>
+            <h3 class="project-card__title">Projeto 01</h3>
+            <p class="project-card__desc">Landing page responsiva com HTML, CSS e JavaScript.</p>
+            <a href="#" class="project-card__link">Ver código →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">API</span>
+            </div>
+            <h3 class="project-card__title">Projeto 02</h3>
+            <p class="project-card__desc">Consumo de API pública com fetch e manipulação do DOM.</p>
+            <a href="#" class="project-card__link">Ver código →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Full Stack</span>
+            </div>
+            <h3 class="project-card__title">Projeto 03</h3>
+            <p class="project-card__desc">Aplicação completa com front-end, back-end e banco de dados.</p>
+            <a href="#" class="project-card__link">Ver código →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container container--narrow">
+        <h2 class="section__title">Contato</h2>
+        <form class="form" id="contact-form">
+          <div class="form__group">
+            <label class="form__label" for="name">Nome</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Seu nome" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="message">Mensagem</label>
+            <textarea class="form__input form__textarea" id="message" name="message" placeholder="Sua mensagem..." required></textarea>
+          </div>
+          <button class="btn btn--primary btn--full" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Imersão TP. Feito com 💙</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
